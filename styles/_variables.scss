@@ -1,11 +1,9 @@
-:root {
-  // color background
-  --clrfont: #6f4c5b;
-  --clrbg: #f5e8c7;
-  --clrmid: #deba9d;
+// color background
+$clrfont: #6f4c5b;
+$clrbg: #f5e8c7;
+$clrmid: #deba9d;
 
-  //fontsize
-  --font-sm: 1rem;
-  --font-m: 1.618rem;
-  --font-b: 2.618rem;
-}
+//fontsize
+$font-sm: 1rem;
+$font-m: 1.618rem;
+$font-b: 2.618rem;

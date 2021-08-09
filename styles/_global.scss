@@ -7,6 +7,7 @@
 }
 
 .flex {
+  align-items: center;
   display: flex;
 }
 
@@ -17,4 +18,12 @@
   &-c {
     justify-content: center;
   }
+}
+body {
+  font-family: futura, sans-serif;
+  background-color: $clrbg;
+}
+
+a {
+  text-decoration: none;
 }

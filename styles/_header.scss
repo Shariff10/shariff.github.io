@@ -1,6 +1,5 @@
 .navbar {
   padding: 30px 100px;
-  background-color: $clrbg;
 
   & .menu {
     max-width: 250px;
@@ -11,7 +10,20 @@
   }
   & .logo {
     h4 {
-      font-size: var(--font-m);
+      font-size: $font-m;
     }
+  }
+}
+
+.toggle {
+  > span {
+    display: block;
+    height: 3px;
+    width: 35px;
+    border-radius: 10px;
+    background-color: black;
+  }
+  span:not(:last-child) {
+    margin-bottom: 3px;
   }
 }
