@@ -1,1 +1,40 @@
-/* No CSS *//*# sourceMappingURL=style.css.map */
+.navbar {
+  padding: 30px 100px;
+}
+
+.navbar .menu {
+  max-width: 250px;
+  width: 60%;
+}
+
+.navbar .menu ul li {
+  list-style: none;
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.jc-sb {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.jc-c {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+/*# sourceMappingURL=style.css.map */

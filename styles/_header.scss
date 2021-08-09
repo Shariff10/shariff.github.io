@@ -1,0 +1,17 @@
+.navbar {
+  padding: 30px 100px;
+  background-color: $clrbg;
+
+  & .menu {
+    max-width: 250px;
+    width: 60%;
+    ul li {
+      list-style: none;
+    }
+  }
+  & .logo {
+    h4 {
+      font-size: var(--font-m);
+    }
+  }
+}
