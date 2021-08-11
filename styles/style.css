@@ -394,6 +394,18 @@ a {
 @media (max-width: 39.937rem) {
   .hide_for_mobile {
     display: none;
+    display: block;
+    position: fixed;
+    width: 100vh;
+    top: 85px;
+    right: 0;
+    z-index: -1;
+    padding-block: 10px;
+  }
+  .hide_for_mobile ul {
+    width: 100vh;
+    display: block;
+    text-align: center;
   }
 }
 
