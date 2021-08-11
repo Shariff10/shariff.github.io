@@ -1,11 +1,11 @@
 .navbar {
   color: $clrfont;
-  padding: 2% 5%;
-  box-shadow: 3px -3px 15px 1px $clrfont;
+  z-index: 10;
+  padding: 1% 5%;
   position: relative;
 
   & .menu {
-    max-width: 200px;
+    max-width: 300px;
     width: 60%;
     ul li {
       list-style: none;
@@ -19,8 +19,10 @@
   }
 
   li a {
+    font-size: $font-sm;
     font-weight: 900;
     color: $clrfont;
+    transition: all 100ms ease-in;
 
     &:hover {
       color: $clrmid;
@@ -52,30 +54,65 @@
 }
 .navdown {
   .line1 {
+    background-color: $clrbg;
     transform: rotate(45deg);
   }
   .line2 {
     transform: translateX(-100%);
+    background-color: $clrbg;
     opacity: 0;
   }
   .line3 {
+    background-color: $clrbg;
     transform: rotate(-45deg);
   }
 }
+.background {
+  position: fixed;
+  height: 100vh;
+  width: 100vh;
+  z-index: 5;
+  background-color: $clrbg;
+  opacity: 0.5;
+  visibility: hidden;
+  transition: visibility 300ms ease-in-out;
+}
+.down2 {
+  visibility: visible;
+}
+.menudown {
+  padding: 1rem 0;
+  width: 100%;
+  position: fixed;
+  opacity: 0;
+  z-index: 9;
+  top: 0;
+  height: 100%;
+  width: 80%;
+  left: 100%;
+  background-color: $clrfont;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  transition: all 200ms ease-out;
+  > a {
+    text-align: center;
+    line-height: 3;
+    font-weight: 900;
+    color: $clrbg;
+    width: 100%;
+  }
+}
+
+.down {
+  opacity: 1;
+  left: 20%;
+}
+
 .hide_for_mobile {
   @include breakpoints_down(small) {
-    display: block;
-    position: fixed;
-    width: 100vh;
-    top: 85px;
-    right: 0;
-    z-index: -1;
-    padding-block: 10px;
-
-    ul {
-      display: block;
-      text-align: center;
-    }
+    display: none;
   }
 }
 
