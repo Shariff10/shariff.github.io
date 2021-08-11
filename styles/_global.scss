@@ -27,3 +27,14 @@ body {
 a {
   text-decoration: none;
 }
+@mixin breakpoints_up($size) {
+  @media (min-width: map-get($breakpoints_up, $size)) {
+    @content;
+  }
+}
+
+@mixin breakpoints_down($size) {
+  @media (max-width: map-get($breakpoints_down, $size)) {
+    @content;
+  }
+}
