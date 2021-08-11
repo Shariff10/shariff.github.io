@@ -1,8 +1,11 @@
 .navbar {
-  padding: 30px 100px;
+  color: $clrfont;
+  z-index: 10;
+  padding: 1% 5%;
+  position: relative;
 
   & .menu {
-    max-width: 250px;
+    max-width: 300px;
     width: 60%;
     ul li {
       list-style: none;
@@ -11,19 +14,110 @@
   & .logo {
     h4 {
       font-size: $font-m;
+      font-weight: 900;
+    }
+  }
+
+  li a {
+    font-size: $font-sm;
+    font-weight: 900;
+    color: $clrfont;
+    transition: all 100ms ease-in;
+
+    &:hover {
+      color: $clrmid;
     }
   }
 }
 
 .toggle {
+  cursor: pointer;
+  padding: 20px;
   > span {
     display: block;
-    height: 3px;
-    width: 35px;
+    height: 4px;
+    width: 30px;
     border-radius: 10px;
-    background-color: black;
+    background-color: $clrfont;
+    transition: all 300ms ease-in;
+  }
+  .line1 {
+    transform-origin: 6px;
+  }
+
+  .line3 {
+    transform-origin: 5px;
   }
   span:not(:last-child) {
     margin-bottom: 3px;
+  }
+}
+.navdown {
+  .line1 {
+    background-color: $clrbg;
+    transform: rotate(45deg);
+  }
+  .line2 {
+    transform: translateX(-100%);
+    background-color: $clrbg;
+    opacity: 0;
+  }
+  .line3 {
+    background-color: $clrbg;
+    transform: rotate(-45deg);
+  }
+}
+.background {
+  position: fixed;
+  height: 100vh;
+  width: 100vh;
+  z-index: 5;
+  background-color: $clrbg;
+  opacity: 0.5;
+  visibility: hidden;
+  transition: visibility 300ms ease-in-out;
+}
+.down2 {
+  visibility: visible;
+}
+.menudown {
+  padding: 1rem 0;
+  width: 100%;
+  position: fixed;
+  opacity: 0;
+  z-index: 9;
+  top: 0;
+  height: 100%;
+  width: 80%;
+  left: 100%;
+  background-color: $clrfont;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  transition: all 200ms ease-out;
+  > a {
+    text-align: center;
+    line-height: 3;
+    font-weight: 900;
+    color: $clrbg;
+    width: 100%;
+  }
+}
+
+.down {
+  opacity: 1;
+  left: 20%;
+}
+
+.hide_for_mobile {
+  @include breakpoints_down(small) {
+    display: none;
+  }
+}
+
+.hide_for_desktop {
+  @include breakpoints_up(medium) {
+    display: none;
   }
 }

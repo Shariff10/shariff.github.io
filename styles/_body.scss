@@ -1,0 +1,170 @@
+.container {
+  padding: 5% 20%;
+  height: 80vh;
+}
+.intro {
+  position: relative;
+  display: flex;
+  flex: column;
+  flex-direction: column;
+  justify-content: center;
+  line-height: 1.5;
+  color: $clrfont;
+  button {
+    align-self: flex-start;
+    padding: 0.7rem 1.25rem;
+    margin-top: 10px;
+    color: $clrfont;
+    font-size: $font-sm;
+    letter-spacing: 1px;
+    font-family: bebas neue;
+    border-radius: 0.15rem;
+    border: 3px solid $clrfont;
+    z-index: 1;
+    background: none;
+    transition: transform 300ms ease-out;
+
+    &:hover,
+    &:active,
+    &:focus {
+      outline: none;
+      color: $clrbg;
+      background-color: $clrfont;
+    }
+  }
+
+  h1 {
+    font-weight: bold;
+    font-family: bebas neue;
+    line-height: 1;
+
+    &[class*="name"] {
+      font-size: $font-xb;
+      letter-spacing: 5px;
+    }
+    &[class*="about"] {
+      font-size: $font-m;
+      letter-spacing: 8px;
+      color: $clrmid;
+      margin-bottom: 1rem;
+    }
+  }
+  h5 {
+    width: 80%;
+    max-width: 600px;
+    font-weight: 100;
+    margin-bottom: 1rem;
+  }
+
+  &::after {
+    content: "SHARIFF";
+    display: block;
+    position: fixed;
+    font-size: 28rem;
+    color: $clrbgfont;
+    z-index: -100;
+    top: 100px;
+    left: 0%;
+    line-height: 0;
+  }
+  &::before {
+    content: "MUKHLIS";
+    display: block;
+    position: fixed;
+    font-size: 28rem;
+    color: $clrbgfont;
+    z-index: -100;
+    bottom: 150px;
+    left: 0%;
+    line-height: 0;
+  }
+}
+.footer {
+  bottom: 200px;
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.socialmedia {
+  display: flex;
+  position: absolute;
+  left: 0;
+  flex-direction: column;
+  font-size: 1.3rem;
+  color: $clrfont;
+  padding: 30px;
+  transition: all 500ms ease-out;
+  &::after {
+    content: "";
+    height: 100px;
+    width: 2px;
+    background-color: $clrfont;
+    left: 50%;
+    position: absolute;
+    display: block;
+    bottom: -80px;
+  }
+
+  > * {
+    cursor: pointer;
+    padding-bottom: 15px;
+
+    &:hover {
+      color: #523d46;
+    }
+  }
+}
+
+.email {
+  transform: rotate(90deg);
+  position: absolute;
+  right: -50px;
+  top: -17px;
+
+  &::after {
+    transform: rotate(-90deg);
+    content: "";
+    height: 100px;
+    width: 2px;
+    background-color: $clrfont;
+    right: -70px;
+    position: absolute;
+    display: block;
+    bottom: -42px;
+  }
+
+  a {
+    color: $clrfont;
+    font-size: 0.8rem;
+
+    &:hover {
+      border-bottom: 2px solid $clrfont;
+    }
+  }
+}
+.mobile {
+  @include breakpoints_down(medium) {
+    text-align: center;
+    align-items: center;
+    padding: 5% 5%;
+
+    button {
+      align-self: center;
+    }
+  }
+}
+.mediaphone {
+  @include breakpoints_down(small) {
+    flex-direction: row;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    padding: 0;
+    top: 0;
+    > * {
+      padding: 0 0.3rem;
+    }
+  }
+}
