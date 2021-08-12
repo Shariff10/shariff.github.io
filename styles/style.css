@@ -67,7 +67,7 @@ a {
   padding: 0.7rem 1.25rem;
   margin-top: 10px;
   color: #6f4c5b;
-  font-size: 0.85rem;
+  font-size: 1rem;
   letter-spacing: 1px;
   font-family: bebas neue;
   border-radius: 0.15rem;
@@ -98,7 +98,7 @@ a {
 }
 
 .intro h1[class*="about"] {
-  font-size: 1.618rem;
+  font-size: 2rem;
   letter-spacing: 8px;
   color: #deba9d;
   margin-bottom: 1rem;
@@ -270,12 +270,12 @@ a {
 }
 
 .navbar .logo h4 {
-  font-size: 1.618rem;
+  font-size: 2rem;
   font-weight: 900;
 }
 
 .navbar li a {
-  font-size: 0.85rem;
+  font-size: 1rem;
   font-weight: 900;
   color: #6f4c5b;
   -webkit-transition: all 100ms ease-in;
